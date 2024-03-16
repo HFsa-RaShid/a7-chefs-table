@@ -6,7 +6,7 @@
       "ingredients": ["550 g chicken", "120 ml soy sauce", "50 g brown sugar", "30 ml rice vinegar", "15 ml sesame oil", "10 g minced garlic"],
       "preparing_time": "40 min",
       "calories": "350 calories",
-      "recipe_image": "https://i.ibb.co/Js7w1p6/bite-me-more-grilled-chicken-teriyaki.jpg"
+      "recipe_image": "https://i.ibb.co/Vv118YD/chicken-prepared-sauce-served-with-lemon-slices.jpg"
     },
     {
       "recipe_id": "2",
@@ -15,16 +15,16 @@
       "ingredients": ["250 g cherry tomatoes", "200 g fresh mozzarella", "30 g fresh basil leaves", "15 ml balsamic vinegar", "10 ml olive oil", "Salt and pepper to taste"],
       "preparing_time": "15 min",
       "calories": "180 calories",
-      "recipe_image": "https://i.ibb.co/FYCPc7t/Caprese-Salad-7.jpg"
+      "recipe_image": "https://i.ibb.co/0tm97Cc/greek-salad-with-fresh-vegetables-feta-cheese-kalamata-olives.jpg"
     },
     {
       "recipe_id": "3",
       "recipe_name": "Vegetable Stir Fry",
       "short_description": "Healthy stir fry loaded with colorful vegetables and tofu",
-      "ingredients": ["300 g mixed vegetables (bell peppers, broccoli, carrots, etc.)", "200 g firm tofu", "50 ml soy sauce", "30 ml hoisin sauce", "10 ml sesame oil", "5 g minced ginger"],
+      "ingredients": ["300 g mixed vegetables", "200 g firm tofu", "50 ml soy sauce", "30 ml hoisin sauce", "10 ml sesame oil", "5 g minced ginger"],
       "preparing_time": "25 min",
       "calories": "250 calories",
-      "recipe_image": "https://i.ibb.co/hVVp53d/vegetable-stir-fry-3.jpg"
+      "recipe_image": "https://i.ibb.co/n18xqdd/fried-vegetables-with-sauce-pan.jpg"
     },
     {
       "recipe_id": "4",
@@ -33,7 +33,7 @@
       "ingredients": ["150 g cooked quinoa", "1 avocado, diced", "100 g black beans", "50 g cherry tomatoes, halved", "30 g red onion, finely chopped", "30 ml lime juice"],
       "preparing_time": "20 min",
       "calories": "280 calories",
-      "recipe_image": "https://i.ibb.co/xSv2gdH/My-Favourite-Quinoa-Salad-5-SQ.webp"
+      "recipe_image": "https://i.ibb.co/bNj9ytT/mixed-salad-cucumber-tomato-onion-pomegranate-lemon-side-view.jpg"
     },
     {
       "recipe_id": "5",
