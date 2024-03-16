@@ -2,7 +2,7 @@ import { MdOutlineAccessTime } from "react-icons/md";
 import { LiaBurnSolid } from "react-icons/lia";
 
 
-const EachRecipe = ({useRecipe}) => {
+const EachRecipe = ({useRecipe, handleCart}) => {
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl ">
@@ -33,11 +33,9 @@ const EachRecipe = ({useRecipe}) => {
                     </div>
 
                 </div>
-                
-
-                
+-
                 <div className="card-actions mt-3">
-                  <button className="bg-[#0BE58A] text-black rounded-3xl px-4 py-2 font-medium">Want to Cook</button>
+                  <button onClick={(e) =>handleCart(useRecipe)} className="bg-[#0BE58A] text-black rounded-3xl px-4 py-2 font-medium">Want to Cook</button>
                 </div>
               </div>
             </div>
