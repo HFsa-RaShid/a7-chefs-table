@@ -6,7 +6,6 @@ import './App.css'
 import Header from './header'
 import EachRecipe from './EachRecipe';
 
-// import { toast } from 'react-toastify'; 
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css'; 
 
@@ -15,8 +14,9 @@ function App() {
   const [recipes,setRecipes]=useState([]);
   const [cart,setCart] = useState([]);
   const [count, setCount] = useState(1);
+  const [cooking, setCooking] = useState([]);
+  const [Currentlycount, setCurrentlyCount] = useState(0);
 
-  // const notify = () => toast("Wow so easy!");
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
     if(!isExist)
     {
       // setCart([...cart,r]);
-      const updatedRecipe = { ...r, count }; // Add count to the recipe object
+      const updatedRecipe = { ...r, count };
       setCart([...cart, updatedRecipe]);
   
       setCount(count + 1);
@@ -40,6 +40,20 @@ function App() {
     else{
       toast.error("Recipe already in cart");
     }
+  };
+
+  const handlePrepare = (recipe) => {
+    // Remove the recipe from the cart
+    const updatedCart = cart.filter(item => item.recipe_id !== recipe.recipe_id);
+    setCart(updatedCart);
+    
+    // Add to cooking
+    const updatedCooking = [...cooking, recipe];
+    setCooking(updatedCooking);
+
+    setCurrentlyCount(Currentlycount + 1);
+
+    setCount(count - 1);
   };
 
 
@@ -61,42 +75,70 @@ function App() {
                   
               </div>
               <div>
-              <h2>Cart Info</h2>
-                <div className="overflow-x-auto">
-                  <table className="table">
-                    <thead>
-                      <tr className='text-xl'>
-                        <th className='w-[5%]'></th>
-                        
-                        <th className='w-[20%] '>Name</th>
-                        <th className='w-[20%]'>Time</th>
-                        <th className='w-[50%]'>Calories</th>
+
+                {/* want to cook */}
+                  <h2 className='mt-5 mb-5 text-center text-2xl font-semibold'>Want to cook:  <span>{count-1}</span></h2>
+                  <div className="overflow-x-auto">
+                    <table className="table">
+                      <thead>
+                        <tr className='text-xl'>
+                          <th className='w-[5%]'></th>
+                          
+                          <th className='w-[20%] '>Name</th>
+                          <th className='w-[20%]'>Time</th>
+                          <th className='w-[50%]'>Calories</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div> 
+
+
+                  <div>
+                      <table>
+                      {cart.map((item, index) => ( 
+                      <tr key={index}>
+                        <td className='w-[10%]'>{item.count}</td>
+                        <td className='w-[20%] py-4'>{item.recipe_name}</td>
+                        <td className='w-[25%]'>{item.preparing_time}</td>
+                        <td className='w-[20%]'>{item.calories}</td>
+                        <button className='px-4 py-2 mt-5 bg-[#0BE58A] rounded-3xl' onClick={() => handlePrepare(item)}>Preparing</button>
                       </tr>
-                    </thead>
-                  </table>
-                  
-                </div>  
-                <div>
-                  <table>
-                  
-                  
-                  {cart.map((item, index) => (
                     
-                <tr key={index}>
-                  <td className='w-[10%]'>{item.count}</td>
-                  <td className='w-[20%] py-4'>{item.recipe_name}</td>
-                  <td className='w-[25%]'>{item.preparing_time}</td>
-                  <td className='w-[20%]'>{item.calories}</td>
-                  <button className='px-4 py-2 mt-5 bg-[#0BE58A] rounded-3xl'>Preparing</button>
-                </tr>
-                
-              ))}
+                      ))}
 
-                  </table>
-                  <hr></hr>
-                
+                      </table>
+                      <hr></hr>
+                  </div>
 
-                </div>
+                  {/* Currently cooking: */}
+                  <h2 className='mt-5 mb-5 text-center text-2xl font-semibold'>Currently cooking:  <span>{Currentlycount}</span></h2>
+                  <div className="overflow-x-auto">
+                    <table className="table">
+                      <thead>
+                        <tr className='text-xl'>
+                          <th className='w-[5%]'></th>
+                          
+                          <th className='w-[20%] '>Name</th>
+                          <th className='w-[20%]'>Time</th>
+                          <th className='w-[50%]'>Calories</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div> 
+
+                  <div>
+                  <     table>
+                        {cooking.map((item, index) => (
+                          <tr key={index}>
+                            <td className='w-[10%]'>{index+1}</td>
+                            <td className='w-[20%] py-4'>{item.recipe_name}</td>
+                            <td className='w-[25%]'>{item.preparing_time}</td>
+                            <td className='w-[20%]'>{item.calories}</td>
+                          </tr>
+                        ))}
+                      </table>
+                      <hr></hr>
+                  </div>
 
               </div>
 
