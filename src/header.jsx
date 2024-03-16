@@ -48,7 +48,7 @@ const Header = () => {
                     <h1 className="text-white text-[52px]">Discover an exceptional cooking class tailored for you!</h1>
                     <p className="text-[18px] mt-6">Embark on a culinary journey like no other with our exceptional cooking classes. From mastering classic recipes to exploring exotic flavors, our expert chefs will guide you through every step, ensuring a delightful and enriching experience. Join us and uncover the secrets of gourmet cooking today!</p>
                     <div className="mt-10">
-                        <button className="bg-[#0BE58A] px-4 py-3 rounded-3xl mr-3 text-black font-semibold hover:bg-green-300 hover:text-white">Explore Now</button>
+                        <button className="bg-[#0BE58A] border-none px-4 py-3 rounded-3xl mr-3 text-black font-semibold hover:bg-green-300 hover:text-white">Explore Now</button>
                         <button className="border border-white px-4 py-3 rounded-3xl ml-3 font-semibold hover:bg-green-300 hover:text-black">Our Feedback</button>
                     </div>
                 </div>

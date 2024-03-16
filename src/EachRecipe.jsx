@@ -34,7 +34,7 @@ const EachRecipe = ({useRecipe, handleCart}) => {
 
                 </div>
                 <div className="card-actions mt-3">
-                  <button onClick={(e) =>handleCart(useRecipe)} className="bg-[#0BE58A] text-black rounded-3xl px-4 py-2 font-medium">Want to Cook</button>
+                  <button onClick={(e) =>handleCart(useRecipe)} className="bg-[#0BE58A] border-none text-black rounded-3xl px-4 py-2 font-medium">Want to Cook</button>
                 </div>
               </div>
             </div>

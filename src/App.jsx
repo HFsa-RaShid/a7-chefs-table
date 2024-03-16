@@ -58,10 +58,12 @@ function App() {
 
 
   return (
-    <div className='font'>
+    <body>
           <Header></Header>
-              <h1>Our Recipes</h1>
+              <div className='w-[350px] lg:w-[600px] mx-auto mb-12'>
+              <h1 className='text-center mt-20 text-[40px] font-semibold'>Our Recipes</h1>
               <p className='text-center'>Satisfying and hearty dishes that will be the centerpiece of your dining experience, offering a burst of flavors and textures.</p>
+              </div>
           <div className="mainContainer container mx-auto flex">
             
               
@@ -74,10 +76,10 @@ function App() {
                 }
                   
               </div>
-              <div>
+              <div className='border p-10 rounded-2xl'>
 
                 {/* want to cook */}
-                  <h2 className='mt-5 mb-5 text-center text-2xl font-semibold'>Want to cook:  <span>{count-1}</span></h2>
+                  <h2 className=' mb-5 text-center text-2xl font-semibold'>Want to cook:  <span>{count-1}</span></h2>
                   <div className="overflow-x-auto">
                     <table className="table">
                       <thead>
@@ -97,11 +99,11 @@ function App() {
                       <table>
                       {cart.map((item, index) => ( 
                       <tr key={index}>
-                        <td className='w-[10%]'>{item.count}</td>
-                        <td className='w-[20%] py-4'>{item.recipe_name}</td>
-                        <td className='w-[25%]'>{item.preparing_time}</td>
-                        <td className='w-[20%]'>{item.calories}</td>
-                        <button className='px-4 py-2 mt-5 bg-[#0BE58A] rounded-3xl' onClick={() => handlePrepare(item)}>Preparing</button>
+                        <td className='w-[10%] '>{item.count}</td>
+                        <td className='w-[20%] py-4 '>{item.recipe_name}</td>
+                        <td className='w-[25%] '>{item.preparing_time}</td>
+                        <td className='w-[20%] '>{item.calories}</td>
+                        <button className='px-4 py-2 mt-5 bg-[#0BE58A] border-none rounded-3xl' onClick={() => handlePrepare(item)}>Preparing</button>
                       </tr>
                     
                       ))}
@@ -142,15 +144,9 @@ function App() {
 
               </div>
 
-            
-            
-           
-              
-            
-            
       </div>
         <ToastContainer />
-    </div>
+    </body>
   )
 }
 
