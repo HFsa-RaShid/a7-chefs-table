@@ -82,7 +82,7 @@ function App() {
                 }
                   
               </div>
-              <div className='border p-10 rounded-2xl'>
+              <div className=' p-10 rounded-2xl shadow-xl'>
 
                 {/* want to cook */}
                   <h2 className=' mb-5 text-center text-2xl font-semibold'>Want to cook:  <span>{count-1}</span></h2>
