@@ -5,7 +5,7 @@ import { LiaBurnSolid } from "react-icons/lia";
 const EachRecipe = ({useRecipe, handleCart}) => {
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl ">
+            <div className="card w-96 bg-base-100 shadow-xl mx-auto">
               <figure className="px-10 pt-10">
                 <img src={useRecipe.recipe_image} alt="" className="rounded-xl w-[330px] h-[200px]" />
               </figure>

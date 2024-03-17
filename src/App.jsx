@@ -61,13 +61,13 @@ function App() {
     <body>
           <Header></Header>
               <div className='w-[350px] lg:w-[600px] mx-auto mb-12'>
-              <h1 className='text-center mt-20 text-[40px] font-semibold'>Our Recipes</h1>
-              <p className='text-center'>Satisfying and hearty dishes that will be the centerpiece of your dining experience, offering a burst of flavors and textures.</p>
+              <h1 className='text-center mt-20 mb-5 text-3xl lg:text-[40px] font-semibold'>Our Recipes</h1>
+              <p className='text-center text-[#878787]'>Satisfying and hearty dishes that will be the centerpiece of your dining experience, offering a burst of flavors and textures.</p>
               </div>
-          <div className="mainContainer container mx-auto flex">
+          <div className="mainContainer container mx-auto lg:flex">
             
               
-              <div className="cardsContainer grid grid-cols-2 w-2/3 gap-7">
+              <div className="cardsContainer grid grid-cols-1 lg:grid-cols-2  w-full lg:w-2/3 gap-7">
                 {
                     recipes.map((rcp) =>(
                       <EachRecipe key={rcp.id} useRecipe={rcp} handleCart={handleCart} count={count} />
