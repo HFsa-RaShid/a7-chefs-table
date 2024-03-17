@@ -1,6 +1,8 @@
 import { CgProfile } from "react-icons/cg";
 import coverImage from './image/cover.jpg';
 
+import { IoSearchOutline } from "react-icons/io5";
+
 const Header = () => {
     return (
         
@@ -30,8 +32,8 @@ const Header = () => {
                 </div>
                 <div className="navbar-end ">
                         
-                        <input className="bg-[#150B2B0D] rounded-l-2xl px-4 py-2 border-none hidden lg:flex" type="text" name="" id="" placeholder="Search Here...."/>
-                        <button className="mr-3 px-3 py-2 bg-[#0BE58A] rounded-r-2xl border-none text-white hidden lg:flex">Search</button>
+                        <input className=" hidden lg:flex bg-[#150B2B0D] rounded-l-2xl px-4 py-2 border-none " type="text" name="" id="" placeholder="Search Here...."/>
+                        <button className="mr-3 lg:px-3 py-2 bg-[#0BE58A] rounded-r-2xl border-none text-white hidden lg:flex items-center"><IoSearchOutline/>Search</button>
 
                         <div className="w-8 h-8 me-3">
                         <CgProfile size="lg" />
@@ -40,7 +42,7 @@ const Header = () => {
                 </div>
                 
             </div>
-            <div className="flex w-full lg:hidden ">
+            <div className="flex w-full lg:hidden">
                         
                         <input className="bg-[#150B2B0D] rounded-l-2xl w-[70%] px-4 py-2 border-none " type="text" name="" id="" placeholder="Search Here...."/>
                         <button className="  px-3 py-2 bg-[#0BE58A] w-[30%] rounded-r-2xl  border-none text-white ">Search</button>   
