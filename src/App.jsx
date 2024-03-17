@@ -105,7 +105,7 @@ function App() {
                       <table>
                       {cart.map((item, index) => ( 
                       <tr key={index}>
-                        <td className='w-[10%] '>{item.count}</td>
+                        <td className='w-[10%] '>{index+1}</td>
                         <td className='w-[20%] py-4 '>{item.recipe_name}</td>
                         <td className='w-[25%] '>{item.preparing_time}</td>
                         <td className='w-[20%] '>{item.calories}</td>
