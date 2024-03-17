@@ -16,6 +16,8 @@ function App() {
   const [count, setCount] = useState(1);
   const [cooking, setCooking] = useState([]);
   const [Currentlycount, setCurrentlyCount] = useState(0);
+  const [totalPreparingTime, setTotalPreparingTime] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
 
 
 
@@ -51,9 +53,13 @@ function App() {
     const updatedCooking = [...cooking, recipe];
     setCooking(updatedCooking);
 
+
     setCurrentlyCount(Currentlycount + 1);
 
     setCount(count - 1);
+
+    setTotalPreparingTime(totalPreparingTime + parseInt(recipe.preparing_time));
+    setTotalCalories(totalCalories + parseInt(recipe.calories));
   };
 
 
@@ -140,6 +146,9 @@ function App() {
                         ))}
                       </table>
                       <hr></hr>
+                      <p>Total Time = {totalPreparingTime}    <span>minutes</span></p>
+                      <p>Total Calories = {totalCalories}    <span>calories</span></p>
+                      
                   </div>
 
               </div>
